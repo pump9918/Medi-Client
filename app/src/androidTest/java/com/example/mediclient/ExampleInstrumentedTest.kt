@@ -1,4 +1,4 @@
-package com.example.medi_client
+package com.example.mediclient
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

@@ -7,12 +7,12 @@ Properties properties = new Properties()
 properties.load(project.rootProject.file('local.properties').newDataInputStream())
 
 android {
-    namespace 'com.example.medi_client'
+    namespace 'com.example.mediclient'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.example.medi_client"
-        minSdk 24
+        applicationId "com.example.mediclient"
+        minSdk 26
         targetSdk 33
         versionCode 1
         versionName "1.0"

@@ -1,4 +1,4 @@
-package com.example.medi_client
+package com.example.mediclient
 
 class Message {
     var message: String? = null

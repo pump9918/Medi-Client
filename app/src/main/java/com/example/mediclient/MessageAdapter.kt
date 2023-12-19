@@ -1,4 +1,4 @@
-package com.example.medi_client
+package com.example.mediclient
 
 import android.view.LayoutInflater
 import android.view.View
