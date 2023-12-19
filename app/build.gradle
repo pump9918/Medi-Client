@@ -3,6 +3,9 @@ plugins {
     id 'org.jetbrains.kotlin.android'
 }
 
+Properties properties = new Properties()
+properties.load(project.rootProject.file('local.properties').newDataInputStream())
+
 android {
     namespace 'com.example.medi_client'
     compileSdk 33
@@ -14,6 +17,7 @@ android {
         versionCode 1
         versionName "1.0"
 
+        buildConfigField "String", "MY_SECRET_KEY", "\"${properties['my.secret.key']}\""
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -30,6 +34,9 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    buildFeatures {
+        buildConfig true
+    }
 }
 
 dependencies {
@@ -41,4 +48,7 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+    // network
+    implementation 'com.squareup.okhttp3:okhttp:4.10.0'
 }
