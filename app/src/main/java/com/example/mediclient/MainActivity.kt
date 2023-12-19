@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.EditText
 import android.widget.ImageButton
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -24,7 +25,7 @@ import java.util.concurrent.TimeUnit
 class MainActivity : AppCompatActivity() {
 
     var recycler_view: RecyclerView? = null
-    var tv_welcome: TextView? = null
+    var iv_welcome: ImageView? = null
     var et_msg: EditText? = null
     var btn_send: ImageButton? = null
     var messageList: MutableList<Message>? = null
@@ -34,7 +35,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         recycler_view = findViewById<RecyclerView>(R.id.recycler_view)
-        tv_welcome = findViewById<TextView>(R.id.tv_welcome)
+        iv_welcome = findViewById<ImageView>(R.id.iv_welcome)
         et_msg = findViewById<EditText>(R.id.et_msg)
         btn_send = findViewById<ImageButton>(R.id.btn_send)
         recycler_view?.setHasFixedSize(true)
@@ -55,7 +56,7 @@ class MainActivity : AppCompatActivity() {
                 addToChat(question, Message.SENT_BY_ME)
                 et_msg?.setText("")
                 callAPI(question)
-                tv_welcome?.setVisibility(View.GONE)
+                iv_welcome?.setVisibility(View.GONE)
             },
         )
     }
