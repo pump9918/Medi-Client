@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menu_chatbot"
+        android:icon="@drawable/ic_menu_chatbot"
+        android:title="iCARE-BOT" />
+
+    <item
+        android:id="@+id/menu_home"
+        android:icon="@drawable/ic_menu_home"
+        android:title="HOME" />
+
+    <item
+        android:id="@+id/menu_mypage"
+        android:icon="@drawable/ic_menu_mypage"
+        android:title="MYPAGE" />
+</menu>
