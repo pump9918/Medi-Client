@@ -41,6 +41,7 @@
             android:layout_margin="16dp"
             android:contentDescription="Chatbot"
             android:text="iCare-Bot +"
+            app:backgroundTint="@color/maincolor"
             app:icon="@drawable/ic_menu_chatbot"
             app:layout_constraintBottom_toBottomOf="@+id/nsv_home"
             app:layout_constraintEnd_toEndOf="parent" />
