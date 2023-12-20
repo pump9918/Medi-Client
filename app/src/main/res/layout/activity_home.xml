@@ -4,6 +4,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/fab_home_chatbot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:layout_gravity="bottom|end"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/fcv_home"
+        android:contentDescription="Chatbot"
+        android:text="iCare-Bot +"
+        app:icon="@drawable/ic_menu_chatbot"/>
+
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fcv_home"
         android:layout_width="0dp"
@@ -13,10 +25,11 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bnv_home"
         android:layout_width="match_parent"
-        android:layout_height="80dp"
+        android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

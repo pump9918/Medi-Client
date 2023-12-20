@@ -24,6 +24,11 @@ class HomeActivity : AppCompatActivity() {
                 .commit()
         }
 
+        binding.fabHomeChatbot.setOnClickListener {
+            val intent = Intent(this, ChatbotActivity::class.java)
+            startActivity(intent)
+        }
+
         clickBottomNavigation()
     }
 
