@@ -1,14 +1,15 @@
-package com.example.mediclient
+package com.example.mediclient.ui.chatbot
 
 import android.os.Bundle
 import android.view.View
 import android.widget.EditText
 import android.widget.ImageButton
 import android.widget.ImageView
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.mediclient.BuildConfig
+import com.example.mediclient.R
 import okhttp3.Call
 import okhttp3.Callback
 import okhttp3.MediaType.Companion.toMediaType
@@ -22,7 +23,7 @@ import org.json.JSONObject
 import java.io.IOException
 import java.util.concurrent.TimeUnit
 
-class MainActivity : AppCompatActivity() {
+class ChatbotActivity : AppCompatActivity() {
 
     var recycler_view: RecyclerView? = null
     var iv_welcome: ImageView? = null
@@ -33,7 +34,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var client: OkHttpClient
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_chatbot)
         recycler_view = findViewById<RecyclerView>(R.id.recycler_view)
         iv_welcome = findViewById<ImageView>(R.id.iv_welcome)
         et_msg = findViewById<EditText>(R.id.et_msg)
