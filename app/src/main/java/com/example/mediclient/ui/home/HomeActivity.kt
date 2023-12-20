@@ -2,6 +2,7 @@ package com.example.mediclient.ui.home
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.Menu
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
@@ -45,7 +46,34 @@ class HomeActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        clickTopAppbar()
         clickDrawNavigation()
+    }
+
+    // 상단 바 호출을 위한 코드
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        menuInflater.inflate(R.menu.menu_top_app_bar, menu)
+        return true
+    }
+
+    private fun clickTopAppbar() {
+        binding.toolbarHome.setOnMenuItemClickListener { menuItem ->
+            when (menuItem.itemId) {
+                R.id.top_mypage -> {
+                    val intent = Intent(this, ChatbotActivity::class.java)
+                    startActivity(intent)
+                    true
+                }
+
+                R.id.top_favorite -> {
+                    val intent = Intent(this, ChatbotActivity::class.java)
+                    startActivity(intent)
+                    true
+                }
+
+                else -> false
+            }
+        }
     }
 
     private fun clickDrawNavigation() {
