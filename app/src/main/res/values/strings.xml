@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Medi-Client</string>
+    <string name="navigation_drawer_open">네비가 열립니다</string>
+    <string name="navigation_drawer_close">네비가 닫힙니다</string>
 </resources>
