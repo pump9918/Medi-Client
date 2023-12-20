@@ -28,6 +28,11 @@
         </activity>
 
         <activity
+            android:name=".ui.home.HomeActivity"
+            android:exported="false">
+        </activity>
+
+        <activity
             android:name=".ui.chatbot.ChatbotActivity"
             android:exported="false">
         </activity>

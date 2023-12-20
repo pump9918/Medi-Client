@@ -7,6 +7,7 @@ import androidx.lifecycle.lifecycleScope
 import com.example.mediclient.R
 import com.example.mediclient.databinding.ActivitySplashBinding
 import com.example.mediclient.ui.chatbot.ChatbotActivity
+import com.example.mediclient.ui.home.HomeActivity
 import com.example.mediclient.util.binding.BindingActivity
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.delay
@@ -29,7 +30,7 @@ class SplashActivity : BindingActivity<ActivitySplashBinding>(R.layout.activity_
     }
 
     private fun moveToSign() {
-        startActivity(Intent(this, ChatbotActivity::class.java))
+        startActivity(Intent(this, HomeActivity::class.java))
         finish()
     }
 }
