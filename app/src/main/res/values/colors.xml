@@ -6,6 +6,7 @@
     <color name="maincolor">#A4FFCE</color>
     <color name="secondcolor">#E0E0E0</color>
     <color name="thirdcolor">#606060</color>
+    <color name="main_back_color">#E9FFF6</color>
 
     <!-- TEST -->
     <color name="purple_200">#FFBB86FC</color>
