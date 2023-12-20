@@ -1,11 +1,13 @@
 package com.example.mediclient.ui.home
 
 import android.content.Intent
+import android.graphics.Color
 import android.os.Bundle
 import android.view.Menu
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
+import androidx.core.view.WindowInsetsControllerCompat
 import androidx.fragment.app.Fragment
 import com.example.mediclient.R
 import com.example.mediclient.databinding.ActivityHomeBinding
@@ -18,6 +20,13 @@ class HomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityHomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        // 상태바 색상 설정
+        window.apply {
+            statusBarColor = Color.WHITE
+            // 상태바 아이콘을 검정색으로 설정 (true: 검정 / false: 흰색)
+            WindowInsetsControllerCompat(this, this.decorView).isAppearanceLightStatusBars = true
+        }
 
         val currentFragment = supportFragmentManager.findFragmentById(R.id.fcv_home)
 
