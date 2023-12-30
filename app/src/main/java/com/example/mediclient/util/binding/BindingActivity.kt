@@ -1,4 +1,4 @@
-package com.example.mediclient
+package com.example.mediclient.util.binding
 
 import android.os.Bundle
 import androidx.annotation.LayoutRes

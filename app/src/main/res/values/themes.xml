@@ -1,9 +1,22 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
     <!-- Base application theme. -->
     <style name="Base.Theme.MediClient" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+
+        <!-- 상단 상태바, 타이틀바 삭제-->
+        <!--<item name="android:windowFullscreen">true</item>-->
+        <item name="windowNoTitle">true</item>
+
+        <item name="android:statusBarColor">@color/white</item> <!-- 상태바 색상-->
+        <item name="android:windowLightStatusBar">true</item>   <!-- 상태바 아이콘(true: 검정 / false: 흰색) -->
     </style>
 
+    <style name="Theme.NavigationDrawer" parent="Theme.MaterialComponents.DayNight.NoActionBar"/>
+
     <style name="Theme.MediClient" parent="Base.Theme.MediClient" />
+
+    <!--  ImageView Style  -->
+    <style name="Radius10">
+        <item name="cornerSize">10dp</item>
+    </style>
+
 </resources>

@@ -1,4 +1,4 @@
-package com.example.mediclient
+package com.example.mediclient.ui.chatbot
 
 class Message {
     var message: String? = null

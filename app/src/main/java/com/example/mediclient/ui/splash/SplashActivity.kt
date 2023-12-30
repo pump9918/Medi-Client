@@ -1,12 +1,16 @@
-package com.example.mediclient
+package com.example.mediclient.ui.splash
 
 import android.content.Intent
 import android.os.Bundle
-import androidx.lifecycle.lifecycleScope
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
+import androidx.lifecycle.lifecycleScope
+import com.example.mediclient.R
 import com.example.mediclient.databinding.ActivitySplashBinding
-import kotlinx.coroutines.delay
+import com.example.mediclient.ui.chatbot.ChatbotActivity
+import com.example.mediclient.ui.home.HomeActivity
+import com.example.mediclient.util.binding.BindingActivity
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
 @AndroidEntryPoint
@@ -26,7 +30,7 @@ class SplashActivity : BindingActivity<ActivitySplashBinding>(R.layout.activity_
     }
 
     private fun moveToSign() {
-        startActivity(Intent(this, MainActivity::class.java))
+        startActivity(Intent(this, HomeActivity::class.java))
         finish()
     }
 }

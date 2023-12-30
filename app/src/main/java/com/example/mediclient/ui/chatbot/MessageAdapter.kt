@@ -1,4 +1,4 @@
-package com.example.mediclient
+package com.example.mediclient.ui.chatbot
 
 import android.view.LayoutInflater
 import android.view.View
@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.mediclient.R
 
 class MessageAdapter(var messageList: List<Message>) :
     RecyclerView.Adapter<MessageAdapter.ViewHolder>() {

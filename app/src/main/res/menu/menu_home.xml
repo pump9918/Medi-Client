@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/main_item"
+        android:title="MENU">
+        <menu>
+            <item
+                android:id="@+id/menu_chatbot"
+                android:checkable="true"
+                android:icon="@drawable/ic_menu_chatbot"
+                android:title="iCARE-BOT" />
+            <item
+                android:id="@+id/menu_home"
+                android:checkable="true"
+                android:icon="@drawable/ic_menu_home"
+                android:title="HOME" />
+            <item
+                android:id="@+id/menu_mypage"
+                android:checkable="true"
+                android:icon="@drawable/ic_menu_mypage"
+                android:title="MYPAGE" />
+        </menu>
+    </item>
+</menu>
