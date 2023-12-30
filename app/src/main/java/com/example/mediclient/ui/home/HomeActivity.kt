@@ -28,11 +28,11 @@ class HomeActivity : AppCompatActivity() {
             WindowInsetsControllerCompat(this, this.decorView).isAppearanceLightStatusBars = true
         }
 
-        val currentFragment = supportFragmentManager.findFragmentById(R.id.fcv_home)
+        val currentFragment = supportFragmentManager.findFragmentById(R.id.rv_home)
 
         if (currentFragment == null) {
             supportFragmentManager.beginTransaction()
-                .add(R.id.fcv_home, HomeFragment())
+                .add(R.id.rv_home, HomeFragment())
                 .commit()
         }
 
@@ -125,7 +125,7 @@ class HomeActivity : AppCompatActivity() {
 
     private fun replaceFragment(fragment: Fragment) {
         supportFragmentManager.beginTransaction()
-            .replace(R.id.fcv_home, fragment)
+            .replace(R.id.rv_home, fragment)
             .commit()
     }
 }
