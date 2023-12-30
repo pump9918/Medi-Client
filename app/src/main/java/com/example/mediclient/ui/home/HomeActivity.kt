@@ -28,11 +28,10 @@ class HomeActivity : AppCompatActivity() {
             WindowInsetsControllerCompat(this, this.decorView).isAppearanceLightStatusBars = true
         }
 
-        val currentFragment = supportFragmentManager.findFragmentById(R.id.rv_home)
-
+        val currentFragment = supportFragmentManager.findFragmentById(R.id.fcv_home)
         if (currentFragment == null) {
             supportFragmentManager.beginTransaction()
-                .add(R.id.rv_home, HomeFragment())
+                .add(R.id.fcv_home, HomeFragment())
                 .commit()
         }
 
@@ -125,36 +124,8 @@ class HomeActivity : AppCompatActivity() {
 
     private fun replaceFragment(fragment: Fragment) {
         supportFragmentManager.beginTransaction()
-            .replace(R.id.rv_home, fragment)
+            .replace(R.id.fcv_home, fragment)
             .commit()
     }
-
-    private val mockHomeContentList = listOf<HomeContent>(
-        HomeContent(
-            profileImage = R.drawable.medi_dummy,
-            title = "정각원의 소리",
-            writer = "동국스님",
-        ),
-        HomeContent(
-            profileImage = R.drawable.medi_dummy,
-            title = "보신각의 소리",
-            writer = "서울스님",
-        ),
-        HomeContent(
-            profileImage = R.drawable.medi_dummy,
-            title = "봉은사의 소리",
-            writer = "강남스님",
-        ),
-        HomeContent(
-            profileImage = R.drawable.medi_dummy,
-            title = "소림사의 소리",
-            writer = "중국스님",
-        ),
-        HomeContent(
-            profileImage = R.drawable.medi_dummy,
-            title = "조계사 소리",
-            writer = "종로스님",
-        )
-    )
 
 }
